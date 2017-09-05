@@ -255,6 +255,9 @@
     };
 
     Slick.prototype.animateSlide = function(targetLeft, callback) {
+        if ( this.slideCount <= this.options.slidesToShow ) {
+            return;
+        }
 
         var animProps = {},
             _ = this;
